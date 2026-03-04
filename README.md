@@ -25,4 +25,4 @@ This project followed an iterative development process:
 The pipeline evaluates multiple models in a single run. You can view the performance comparison by running:
 ```bash
 dvc metrics show
-dvc plots diff master random-forest-exp
+dvc plots show
