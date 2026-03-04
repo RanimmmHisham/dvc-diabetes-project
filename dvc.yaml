@@ -14,9 +14,9 @@ stages:
       - data/processed/train.csv
       - src/train.py
     params:
-      - models  # Tell DVC to watch the "models" list in params.yaml
+      - models
     outs:
-      - models/  # Track the entire folder since filenames now contain model names
+      - models/
 
   validate:
     cmd: python src/validate.py
