@@ -1,1 +1,1 @@
-model: logistic
+model: random_forest
