@@ -34,14 +34,13 @@ stages:
     params:
       params.yaml:
         models:
-        - logistic
         - random_forest
     outs:
     - path: models/
       hash: md5
-      md5: 634e8c6f0c8aa0857422b37d71b77b58.dir
-      size: 1738744
-      nfiles: 2
+      md5: 097ce1febe094b6bbe26395d302db269.dir
+      size: 1718425
+      nfiles: 1
   validate:
     cmd: python src/validate.py
     deps:
@@ -51,9 +50,9 @@ stages:
       size: 4873
     - path: models/
       hash: md5
-      md5: 634e8c6f0c8aa0857422b37d71b77b58.dir
-      size: 1738744
-      nfiles: 2
+      md5: 097ce1febe094b6bbe26395d302db269.dir
+      size: 1718425
+      nfiles: 1
     - path: src/validate.py
       hash: md5
       md5: 15a614c01f8c024dccbc04f70ff4b5e1
@@ -61,9 +60,9 @@ stages:
     outs:
     - path: metrics/metrics.json
       hash: md5
-      md5: ed00bb05db270d8b08561d0ffa4b6df0
-      size: 142
+      md5: 79f07344c6f46344178a5ef6cc336446
+      size: 75
     - path: plots/confusion_matrix.png
       hash: md5
-      md5: 14d751e6f399dc224f9d654d87bbd006
-      size: 14323
+      md5: 9995398c5c300d71b225552a2cba03a5
+      size: 10236
