@@ -8,20 +8,25 @@ from sklearn.ensemble import RandomForestClassifier
 os.makedirs("models", exist_ok=True)
 
 params = yaml.safe_load(open("params.yaml"))
-model_type = params["model"]
+model_list = params["models"]
 
 train = pd.read_csv("data/processed/train.csv")
-
 X = train.drop("Outcome", axis=1)
 y = train["Outcome"]
 
-if model_type == "logistic":
-    model = LogisticRegression(max_iter=1000)
-elif model_type == "random_forest":
-    model = RandomForestClassifier()
+for model_type in model_list:
+    print(f"Training {model_type}...")
+    
+    if model_type == "logistic":
+        model = LogisticRegression(max_iter=1000)
+    elif model_type == "random_forest":
+        model = RandomForestClassifier()
+    else:
+        print(f"Unknown model type: {model_type}")
+        continue
 
-model.fit(X, y)
+    model.fit(X, y)
+    
+    joblib.dump(model, f"models/model_{model_type}.pkl")
 
-joblib.dump(model, "models/model.pkl")
-
-print("Training complete.")
+print("All training complete.")
