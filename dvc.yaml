@@ -25,8 +25,6 @@ stages:
       - models/
       - src/validate.py
     metrics:
-      - metrics/metrics.json:
-          cache: false
+      - metrics/metrics.json
     plots:
-      - plots/confusion_matrix.png:
-          cache: false
+      - plots/confusion_matrix.png
