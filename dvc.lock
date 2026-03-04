@@ -27,19 +27,21 @@ stages:
       hash: md5
       md5: 41288c9b48d586ac06a6de4eb3e16d98
       size: 19284
-    - path: params.yaml
-      hash: md5
-      md5: 9770b4659b2e55e4bb1effa64187d49a
-      size: 20
     - path: src/train.py
       hash: md5
-      md5: d7d46af067fab7661f74837c4fae5468
-      size: 638
+      md5: eb227b4e109029148cfa2ae1e73be68e
+      size: 841
+    params:
+      params.yaml:
+        models:
+        - logistic
+        - random_forest
     outs:
-    - path: models/model.pkl
+    - path: models/
       hash: md5
-      md5: 1c7a985b7d1f0615fcf81015c31bb2e6
-      size: 1717145
+      md5: 634e8c6f0c8aa0857422b37d71b77b58.dir
+      size: 1738744
+      nfiles: 2
   validate:
     cmd: python src/validate.py
     deps:
