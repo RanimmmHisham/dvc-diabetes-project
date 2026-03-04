@@ -27,6 +27,6 @@ for model_type in model_list:
 
     model.fit(X, y)
     
-    joblib.dump(model, f"models/model_{model_type}.pkl")
+    joblib.dump(model, "models/model.pkl")
 
 print("All training complete.")
