@@ -29,8 +29,8 @@ stages:
       size: 19284
     - path: src/train.py
       hash: md5
-      md5: eb227b4e109029148cfa2ae1e73be68e
-      size: 841
+      md5: 045e712aa515e86f61062aa158ee7cc3
+      size: 829
     params:
       params.yaml:
         models:
@@ -38,7 +38,7 @@ stages:
     outs:
     - path: models/
       hash: md5
-      md5: 0db56e090ec3c3bbe04fbe93685c77be.dir
+      md5: f59c7f4b8df0519fe94dc04260e99072.dir
       size: 1714265
       nfiles: 1
   validate:
@@ -50,19 +50,19 @@ stages:
       size: 4873
     - path: models/
       hash: md5
-      md5: 0db56e090ec3c3bbe04fbe93685c77be.dir
+      md5: f59c7f4b8df0519fe94dc04260e99072.dir
       size: 1714265
       nfiles: 1
     - path: src/validate.py
       hash: md5
-      md5: 15a614c01f8c024dccbc04f70ff4b5e1
-      size: 1214
+      md5: 4deab61947dc28fc25fbdc52df7e1c3b
+      size: 825
     outs:
     - path: metrics/metrics.json
       hash: md5
-      md5: a56fda65d98ed6888ebddd21164eec58
-      size: 75
+      md5: 0333762c04b83876b7ef9010ad8f800f
+      size: 40
     - path: plots/confusion_matrix.png
       hash: md5
-      md5: 1cae7ab0bbb925fcf934161847da7230
-      size: 10281
+      md5: d375375449f65b11482a1c20bafd7151
+      size: 11023
