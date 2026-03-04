@@ -38,8 +38,8 @@ stages:
     outs:
     - path: models/
       hash: md5
-      md5: f59c7f4b8df0519fe94dc04260e99072.dir
-      size: 1714265
+      md5: 7ee09f96e117636c8fed090ee41d1379.dir
+      size: 1716665
       nfiles: 1
   validate:
     cmd: python src/validate.py
@@ -50,8 +50,8 @@ stages:
       size: 4873
     - path: models/
       hash: md5
-      md5: f59c7f4b8df0519fe94dc04260e99072.dir
-      size: 1714265
+      md5: 7ee09f96e117636c8fed090ee41d1379.dir
+      size: 1716665
       nfiles: 1
     - path: src/validate.py
       hash: md5
